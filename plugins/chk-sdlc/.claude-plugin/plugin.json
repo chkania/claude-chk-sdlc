@@ -1,0 +1,6 @@
+{
+  "name": "chk-sdlc",
+  "version": "1.0.0",
+  "description": "Agentenkette für Features (Anforderung, Review, Umsetzung, Code-Review, QA, Retro) mit projektspezifischem Profil.",
+  "author": { "name": "Christoph Kania" }
+}
