@@ -1,14 +1,14 @@
 ---
 name: retro
-description: Retrospektive der Agentenkette – wertet das Laufbuch aus und schlägt höchstens drei Verbesserungen vor.
+description: Retrospective of the agent chain – analyzes the run log and proposes at most three improvements.
 disable-model-invocation: true
 ---
 
-1. Lies `.claude/feature-profile.md` (Pfad des Laufbuchs). Starte den Agenten `chk-sdlc:process-retro` und nenne ihm den Pfad des Plugins: `${CLAUDE_PLUGIN_ROOT}` (dort liegen `agents/` und `skills/feature/SKILL.md`, die er lesen darf).
-2. Lege dem Nutzer seine Vorschläge vor – je Vorschlag Muster, Einordnung (Plugin oder Projekt), Datei und Änderung – und frage per AskUserQuestion (Mehrfachauswahl), welche übernommen werden.
-3. Übernimm nur die gewählten Vorschläge mit Edit:
-   - **Projekt** (Profil, Prüfliste, Laufbuch): direkt im Projekt.
-   - **Plugin:** Die installierte Plugin-Kopie ist ein Cache und wird überschrieben – ändere sie nicht. Frage nach dem Pfad des lokalen Clones von `claude-chk-sdlc` (Standard: `~/Documents/Development/claude-chk-sdlc`), ändere dort und erinnere an Versionserhöhung in `plugin.json`, Commit/Push und `claude plugin update`.
-   Steht eine Änderung im Widerspruch zu `CLAUDE.md` oder zu einer anderen Agentendatei, sag das, statt sie umzusetzen.
-4. Hänge die Zeile „Retro <Datum>: …“ ans Laufbuch an, ergänzt um die übernommenen Vorschläge.
-5. Nicht committen; nenne dem Nutzer die geänderten Dateien.
+1. Read `.claude/feature-profile.md` (path of the run log). Start the agent `chk-sdlc:process-retro` and tell it the plugin path: `${CLAUDE_PLUGIN_ROOT}` (there `agents/` and `skills/feature/SKILL.md` lie, which it may read).
+2. Present the user with the proposals – for each: pattern, classification (plugin or project), file and change – and ask via AskUserQuestion (multi-select) which to adopt.
+3. Apply only the chosen proposals with Edit:
+   - **Project** (profile, checklist, run log): directly in the project.
+   - **Plugin:** The installed plugin copy is a cache and gets overwritten – do not change it. Ask for the path of the local clone of `claude-chk-sdlc` (default `~/Documents/Development/claude-chk-sdlc`), change it there, and remind about the version increase in `plugin.json`, commit/push and `claude plugin update`.
+   If a change conflicts with `CLAUDE.md` or another agent file, say so instead of applying it.
+4. Append the line "Retro <date>: …" to the run log, supplemented by the adopted proposals.
+5. Do not commit; name the changed files to the user.

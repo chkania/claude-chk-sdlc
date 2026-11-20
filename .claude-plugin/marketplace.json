@@ -7,8 +7,8 @@
     {
       "name": "chk-sdlc",
       "source": "./plugins/chk-sdlc",
-      "description": "Agentenkette für Features: Anforderung → Review → Freigabe → Umsetzung → Code-Review → QA, plus Retrospektive. Projektspezifisches steht in .claude/feature-profile.md."
+      "description": "Agent chain for features: requirement → review → approval → implementation → code review → QA, plus retrospective. Project-specific content lives in .claude/feature-profile.md."
     }
   ],
-  "description": "Persönliche Claude-Code-Plugins von Christoph Kania"
+  "description": "Personal Claude Code plugins by Christoph Kania"
 }
